@@ -200,3 +200,66 @@ def load_datasets(feats):
 feats = ['FamilySize', 'Hoge', 'Fuga', 'Piyo']
 X_train, X_test = load_datasets(feats)
 ```
+一番深いimportancesフォルダは、特徴量の重要度を出力するために用意。
+## logs
+logsフォルダには、計算の実行ごとに下記の情報を出力する
+* 利用した特徴量
+* trainのshape
+* 学習器のパラメータ
+* cvのスコア
+実装
+```
+import logging
+
+from lightgbm.callback import _format_eval_result
+
+
+def log_evaluation(logger, period=1, show_stdv=True, level=logging.DEBUG):
+    def _callback(env):
+        if period > 0 and env.evaluation_result_list and (env.iteration + 1) % period == 0:
+            result = '\t'.join([_format_eval_result(x, show_stdv) for x in env.evaluation_result_list])
+            logger.log(level, '[{}]\t{}'.format(env.iteration+1, result))
+    _callback.order = 10
+    return _callback
+```
+### 使い方
+ロガーをあらかじめ作成しておき、log_evaluationの引数を渡すと動く
+```
+# ロガーの作成
+logger = logging.getLogger('main')
+logger.setLevel(logging.DEBUG)
+sc = logging.StreamHandler()
+logger.addHandler(sc)
+fh = logging.FileHandler('hoge.log')
+logger.addHandler(fh)
+
+# データのロードなどは省略
+
+# 訓練時にコールバックのリストを渡す
+clf = lgb.LGBMClassifier()
+callbacks = [log_evaluation(logger, period=10)]
+clf.fit(X_train, y_train, eval_set=[(X_val, y_val)], callbacks=callbacks)
+```
+
+## models
+modelフォルダには学習器を用意する。
+* 入力：pandas.DataFrame、パラメータ
+* 出力
+
+## notebook
+探索用データ分析などで利用したJupyter Notebookを配置する。
+
+ここで試行錯誤した結果を適切なフォルダ内のpythonファイルに取り込んでいく。
+
+## scripts
+汎用的なpythonファイルを配置する。例えば、convert_to_feather.pyファイルは、csvファイルをfeathre形式のファイルに変換する。
+
+## utils
+汎用的に使える関数を書いておく。
+
+# 計算の実行
+リポジトリのルートで以下を実行する。
+```
+python run.py
+```
+
