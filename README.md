@@ -1,4 +1,17 @@
-# Structures
+# 目的
+1. Gitの扱いに慣れる
+2. 機械学習でのフォルダ構成・管理方法を画一する
+3. 仮想企業に対してAIを用いた課題解決・新規事業の提案を練習
+
+# 1. Gitの扱いに慣れる
+* 使用した教材
+    * [Railsチュートリアル：Git/GitHub編](https://railstutorial.jp/git/getting_started#cha-getting_started)
+
+# 2. フォルダ構成・管理方法を画一する
+
+## フォルダ構成
+<details><summary>詳細</summary><div>
+
 ```
 .
 ├── configs
@@ -30,6 +43,9 @@
 ├── run.py
 └── tox.ini
 ```
+
+</div></details>
+
 ## configs
 jsonファイルで書設定を記載。
 * 利用している特徴量
@@ -257,9 +273,15 @@ modelフォルダには学習器を用意する。
 ## utils
 汎用的に使える関数を書いておく。
 
-# 計算の実行
+## 計算の実行
 リポジトリのルートで以下を実行する。
 ```
 python run.py
 ```
+
+## 参考
+* u++さん[【Kaggleのフォルダ構成や管理方法】タイタニック用のGitHubリポジトリを公開しました](https://upura.hatenablog.com/entry/2018/12/28/225234)
+* amaotoneさん[Kaggleで使えるFeather形式を利用した特徴量管理法](https://amalog.hateblo.jp/entry/kaggle-feature-management)
+
+# 3. AI事業の提案（シミュレーション）
 
