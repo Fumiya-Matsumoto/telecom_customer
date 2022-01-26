@@ -59,12 +59,17 @@ dataフォルダはinput/outputに分けている。
 提出用のcsvファイルを出力
 
 ## features
-train/testから作成した各特徴量を保存。
+train/testから作成した各特徴量を保存するためのフォルダ
+* 流れ
+    1. trainとtestにデータが分割されていない場合には、scripts/train_test_split.pyを実行し、データを分割する
+    2. scripts/convert_to_feather.pyでcsv形式からfeather形式に変換する
+    3. create.pyで特徴量をfeatrer形式でfeaturesフォルダ内に保存
 
 特徴量管理のポイントは以下の3点
 * Feather形式でシリアライズする
 * 特徴量は基底クラスを継承して実装
 * 特徴量作成スクリプトはargparseを利用してコマンドラインツールとして実行可能にする
+
 ### Feather形式でシリアライズ
 Featherは読み込みが非常に高速。C++で実装されており、Pythonのラッパーが提供されている。
 
@@ -78,6 +83,8 @@ $ pip install -U feather-format
 
 ### 基底クラスの実装
 同じようなコードを何度も書くことは、メンテナンスの都合上、望ましくないため、以下のような基底クラス継承して特徴量を作成することを考える。
+
+<details><summary>コード詳細</summary><div>
 
 ```
 import re
@@ -126,6 +133,9 @@ class Feature(metaclass=ABCMeta):
         self.train.to_feather(str(self.train_path))
         self.test.to_feather(str(self.test_path))
 ```
+
+</div></details>
+
 #### timer()
 処理時間を簡単に計測するための関数
 #### Featureクラス
@@ -268,7 +278,9 @@ modelフォルダには学習器を用意する。
 ここで試行錯誤した結果を適切なフォルダ内のpythonファイルに取り込んでいく。
 
 ## scripts
-汎用的なpythonファイルを配置する。例えば、convert_to_feather.pyファイルは、csvファイルをfeathre形式のファイルに変換する。
+汎用的なpythonファイルを配置する。
+* convert_to_feather.py：csvファイルをfeathre形式のファイルに変換
+* train_test_split.py：元データ（csv形式）をtrain.csvとtest.csvに変換
 
 ## utils
 汎用的に使える関数を書いておく。
@@ -280,8 +292,8 @@ python run.py
 ```
 
 ## 参考
-* u++さん[【Kaggleのフォルダ構成や管理方法】タイタニック用のGitHubリポジトリを公開しました](https://upura.hatenablog.com/entry/2018/12/28/225234)
-* amaotoneさん[Kaggleで使えるFeather形式を利用した特徴量管理法](https://amalog.hateblo.jp/entry/kaggle-feature-management)
+* u++さん：[【Kaggleのフォルダ構成や管理方法】タイタニック用のGitHubリポジトリを公開しました](https://upura.hatenablog.com/entry/2018/12/28/225234)
+* amaotoneさん：[Kaggleで使えるFeather形式を利用した特徴量管理法](https://amalog.hateblo.jp/entry/kaggle-feature-management)
 
 # 3. AI事業の提案（シミュレーション）
 

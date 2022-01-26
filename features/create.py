@@ -6,6 +6,11 @@ from base import Feature, get_arguments, generate_features
 
 Feature.dir = "features"
 
+# class feature(Feature):
+#     def create_features(self):
+#         self.train['feature'] = train['feature']
+#         self.test['feature'] = test['feature']
+
 class rev_Mean(Feature):
     def create_features(self):
         self.train['rev_Mean'] = train['rev_Mean']
@@ -96,45 +101,70 @@ class plcd_vce_Mean(Feature):
         self.train['plcd_vce_Mean'] = train['plcd_vce_Mean']
         self.test['plcd_vce_Mean'] = test['plcd_vce_Mean']
 
-class feature(Feature):
+class plcd_dat_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['plcd_dat_Mean'] = train['plcd_dat_Mean']
+        self.test['plcd_dat_Mean'] = test['plcd_dat_Mean']
 
-class feature(Feature):
+class recv_vce_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['recv_vce_Mean'] = train['recv_vce_Mean']
+        self.test['recv_vce_Mean'] = test['recv_vce_Mean']
 
-class feature(Feature):
+class recv_sms_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['recv_sms_Mean'] = train['recv_sms_Mean']
+        self.test['recv_sms_Mean'] = test['recv_sms_Mean']
 
-class feature(Feature):
+class comp_vce_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['comp_vce_Mean'] = train['comp_vce_Mean']
+        self.test['comp_vce_Mean'] = test['comp_vce_Mean']
 
-class feature(Feature):
+class comp_dat_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['comp_dat_Mean'] = train['comp_dat_Mean']
+        self.test['comp_dat_Mean'] = test['comp_dat_Mean']
 
-class feature(Feature):
+class custcare_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['custcare_Mean'] = train['custcare_Mean']
+        self.test['custcare_Mean'] = test['custcare_Mean']
 
-class feature(Feature):
+class ccrndmou_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['ccrndmou_Mean'] = train['ccrndmou_Mean']
+        self.test['ccrndmou_Mean'] = test['ccrndmou_Mean']
 
-class feature(Feature):
+class cc_mou_Mean(Feature):
     def create_features(self):
-        self.train['feature'] = train['feature']
-        self.test['feature'] = test['feature']
+        self.train['cc_mou_Mean'] = train['cc_mou_Mean']
+        self.test['cc_mou_Mean'] = test['cc_mou_Mean']
+
+class inonemin_Mean(Feature):
+    def create_features(self):
+        self.train['inonemin_Mean'] = train['inonemin_Mean']
+        self.test['inonemin_Mean'] = test['inonemin_Mean']
+
+class threeway_Mean(Feature):
+    def create_features(self):
+        self.train['threeway_Mean'] = train['threeway_Mean']
+        self.test['threeway_Mean'] = test['threeway_Mean']
+
+class mou_cvce_Mean(Feature):
+    def create_features(self):
+        self.train['mou_cvce_Mean'] = train['mou_cvce_Mean']
+        self.test['mou_cvce_Mean'] = test['mou_cvce_Mean']
+
+class mou_cdat_Mean(Feature):
+    def create_features(self):
+        self.train['mou_cdat_Mean'] = train['mou_cdat_Mean']
+        self.test['mou_cdat_Mean'] = test['mou_cdat_Mean']
+
+class mou_rvce_Mean(Feature):
+    def create_features(self):
+        self.train['mou_rvce_Mean'] = train['mou_rvce_Mean']
+        self.test['mou_rvce_Mean'] = test['mou_rvce_Mean']
 
 if __name__ == '__main__':
     args = get_arguments()
