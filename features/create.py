@@ -306,6 +306,21 @@ class adjmou(Feature):
         self.train['adjmou'] = train['adjmou']
         self.test['adjmou'] = test['adjmou']
 
+class adjqty(Feature):
+    def create_features(self):
+        self.train['adjqty'] = train['adjqty']
+        self.test['adjqty'] = test['adjqty']
+
+class avgrev(Feature):
+    def create_features(self):
+        self.train['avgrev'] = train['avgrev']
+        self.test['avgrev'] = test['avgrev']
+
+class avgmou(Feature):
+    def create_features(self):
+        self.train['avgmou'] = train['avgmou']
+        self.test['avgmou'] = test['avgmou']
+
 class avgqty(Feature):
     def create_features(self):
         self.train['avgqty'] = train['avgqty']

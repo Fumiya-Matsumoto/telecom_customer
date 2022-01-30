@@ -1,0 +1,59 @@
+DEBUG:root:./logs/log_20220127162417.log
+DEBUG:root:['months', 'mou_mean', 'change_mou', 'totmrc_mean', 'change_rev', 'hnd_price', 'eqpdays', 'lor', 'avgqty', 'uniqsubs', 'avgrev', 'ovrrev_mean', 'avgmou']
+DEBUG:root:(80000, 13)
+DEBUG:root:{'learning_rate': 0.1, 'num_leaves': 8, 'boosting_type': 'gbdt', 'colsample_bytree': 0.65, 'reg_alpha': 1, 'reg_lambda': 1, 'objective': 'multiclass', 'num_class': 2}
+DEBUG:main:[30]	valid_0's multi_logloss: 0.654557
+DEBUG:main:[60]	valid_0's multi_logloss: 0.646747
+DEBUG:main:[90]	valid_0's multi_logloss: 0.643466
+DEBUG:main:[120]	valid_0's multi_logloss: 0.641543
+DEBUG:main:[150]	valid_0's multi_logloss: 0.640396
+DEBUG:main:[180]	valid_0's multi_logloss: 0.639356
+DEBUG:main:[210]	valid_0's multi_logloss: 0.638615
+DEBUG:main:[240]	valid_0's multi_logloss: 0.638068
+DEBUG:main:[270]	valid_0's multi_logloss: 0.63748
+DEBUG:main:[300]	valid_0's multi_logloss: 0.637221
+DEBUG:main:[330]	valid_0's multi_logloss: 0.636801
+DEBUG:main:[360]	valid_0's multi_logloss: 0.636478
+DEBUG:main:[390]	valid_0's multi_logloss: 0.636268
+DEBUG:main:[420]	valid_0's multi_logloss: 0.636037
+DEBUG:main:[450]	valid_0's multi_logloss: 0.635902
+DEBUG:root:444
+DEBUG:root:0.6358787582087562
+DEBUG:root:{'learning_rate': 0.1, 'num_leaves': 8, 'boosting_type': 'gbdt', 'colsample_bytree': 0.65, 'reg_alpha': 1, 'reg_lambda': 1, 'objective': 'multiclass', 'num_class': 2}
+DEBUG:main:[30]	valid_0's multi_logloss: 0.657154
+DEBUG:main:[60]	valid_0's multi_logloss: 0.650116
+DEBUG:main:[90]	valid_0's multi_logloss: 0.647345
+DEBUG:main:[120]	valid_0's multi_logloss: 0.645348
+DEBUG:main:[150]	valid_0's multi_logloss: 0.644142
+DEBUG:main:[180]	valid_0's multi_logloss: 0.643161
+DEBUG:main:[210]	valid_0's multi_logloss: 0.6423
+DEBUG:main:[240]	valid_0's multi_logloss: 0.641586
+DEBUG:main:[270]	valid_0's multi_logloss: 0.64124
+DEBUG:main:[300]	valid_0's multi_logloss: 0.640957
+DEBUG:main:[330]	valid_0's multi_logloss: 0.640612
+DEBUG:main:[360]	valid_0's multi_logloss: 0.640464
+DEBUG:main:[390]	valid_0's multi_logloss: 0.640309
+DEBUG:main:[420]	valid_0's multi_logloss: 0.6402
+DEBUG:main:[450]	valid_0's multi_logloss: 0.640041
+DEBUG:root:469
+DEBUG:root:0.6399523854082878
+DEBUG:root:{'learning_rate': 0.1, 'num_leaves': 8, 'boosting_type': 'gbdt', 'colsample_bytree': 0.65, 'reg_alpha': 1, 'reg_lambda': 1, 'objective': 'multiclass', 'num_class': 2}
+DEBUG:main:[30]	valid_0's multi_logloss: 0.655748
+DEBUG:main:[60]	valid_0's multi_logloss: 0.648147
+DEBUG:main:[90]	valid_0's multi_logloss: 0.644625
+DEBUG:main:[120]	valid_0's multi_logloss: 0.642961
+DEBUG:main:[150]	valid_0's multi_logloss: 0.64192
+DEBUG:main:[180]	valid_0's multi_logloss: 0.640818
+DEBUG:main:[210]	valid_0's multi_logloss: 0.640115
+DEBUG:main:[240]	valid_0's multi_logloss: 0.639664
+DEBUG:main:[270]	valid_0's multi_logloss: 0.639412
+DEBUG:main:[300]	valid_0's multi_logloss: 0.638919
+DEBUG:main:[330]	valid_0's multi_logloss: 0.638681
+DEBUG:main:[360]	valid_0's multi_logloss: 0.638269
+DEBUG:main:[390]	valid_0's multi_logloss: 0.638002
+DEBUG:main:[420]	valid_0's multi_logloss: 0.637779
+DEBUG:root:435
+DEBUG:root:0.6376542946201106
+DEBUG:root:===CV scores===
+DEBUG:root:[0.6358787582087562, 0.6399523854082878, 0.6376542946201106]
+DEBUG:root:0.6378284794123849
